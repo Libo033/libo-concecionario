@@ -5,7 +5,7 @@
 :root {
   --background: #f9f9f9;
   --primary: #014a53;
-  --secondary: #f9f07e;
+  --secondary: #fcf080;
 }
 
 * {
@@ -16,4 +16,24 @@
 
 body {
   background: var(--background);
+}
+
+.link-hover {
+  --b: 0.1em;
+
+  color: #0000;
+  padding-block: var(--b);
+  background: linear-gradient(var(--primary) 50%, #000 0) 0%
+      calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--primary) 0 0) 0% var(--_p, 0%) / var(--_p, 0%)
+      var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.15s var(--_s, 0s) linear,
+    background-size 0.3s calc(0.3s - var(--_s, 0s));
+}
+
+.link-hover:hover {
+  --_p: 100%;
+  --_s: 0.3s;
 }
