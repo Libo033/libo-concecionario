@@ -4,7 +4,7 @@ import React from "react";
 
 const NavigationBarDrawer = ({ onClose }: { onClose: () => void }) => {
   return (
-    <div className="h-screen bg-[var(--primary)] relative md:hidden">
+    <div className="h-screen bg-gradient-to-b from-[var(--primary)] to-zinc-900 relative md:hidden">
       <Image
         className="absolute right-4 top-4 sm:right-6 sm:top-6"
         onClick={(e) => onClose()}
