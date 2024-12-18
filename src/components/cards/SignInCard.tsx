@@ -4,12 +4,12 @@ import React from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
 
-const StayInTouchCard = () => {
+const SignInCard = () => {
   return (
     <motion.div
       initial={{ translateX: -300, opacity: 0 }}
       whileInView={{ translateX: 0, opacity: 1 }}
-      className="bg-gradient-to-br from-[var(--primary)] to-gray-800 my-20 mx-3 shadow-2xl rounded-lg max-w-[450px]"
+      className="bg-gradient-to-br from-[var(--primary)] to-gray-800 mx-3 shadow-2xl rounded-lg max-w-[450px] md:w-1/2"
     >
       <div className="text-white p-8">
         <p className="text-3xl font-bold text-left">Join Our Community</p>
@@ -35,4 +35,4 @@ const StayInTouchCard = () => {
   );
 };
 
-export default StayInTouchCard;
+export default SignInCard;
